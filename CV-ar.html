@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marouf Roua resume</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<style>
+    .clip-path-custom {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%);
+    }
+
+    canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+</style>
+
+<body class="bg-sky-700 text-white flex items-center justify-center min-h-screen font-poppins p-4 relative">
+
+<canvas id="bg-animation"></canvas>
+
+<div class="w-full max-w-6xl h-auto md:h-[70vh] flex flex-col md:flex-row rounded-lg overflow-hidden relative">
+    <!-- Sidebar / Bottom Navigation -->
+    <div class="py-4 px-2">
+        <aside class="bg-stone-100 md:w-1/7 flex md:flex-col md:items-center p-3 md:p-5 space-x-4 md:space-x-0 md:space-y-6 fixed
+                bottom-0 left-0 right-0 md:static flex-row justify-between md:justify-start rounded-md text-gray-700">
+            <div class="menu-item text-center py-2 md:py-4 cursor-pointer transition text-sky-600" data-section="about">
+                <i class="fas fa-user text-xl md:text-2xl"></i>
+                <span class="text-xs block md:mt-1">حول</span>
+            </div>
+            <div class="menu-item text-center py-2 md:py-4 cursor-pointer transition hover:text-sky-600"
+                 data-section="resume">
+                <i class="fas fa-file-alt text-xl md:text-2xl"></i>
+                <span class="text-xs block md:mt-1">السيرة الذاتية</span>
+            </div>
+            <div class="menu-item text-center py-2 md:py-4 cursor-pointer transition hover:text-sky-600"
+                 data-section="portfolio">
+                <i class="fas fa-briefcase text-xl md:text-2xl"></i>
+                <span class="text-xs block md:mt-1">المشاريع</span>
+            </div>
+            <div class="menu-item text-center py-2 md:py-4 cursor-pointer transition hover:text-sky-600"
+                 data-section="contact">
+                <i class="fas fa-envelope text-xl md:text-2xl"></i>
+                <span class="text-xs block md:mt-1">تواصل</span>
+            </div>
+        </aside>
+    </div>
+    <!-- Profile Section -->
+    <section
+            class="md:w-2/6 bg-stone-100 flex flex-col items-center justify-between text-center relative rounded-md text-gray-700">
+        <div class="relative w-full">
+            <img src="profilePic.jpeg" alt="Profile" class="w-full object-cover clip-path-custom rounded-t-md">
+        </div>
+        <div>
+            <h1 class="text-xl md:text-2xl font-bold mt-4">مروان حنان رؤى</h1>
+            <p class="text-sky-700 text-md md:text-lg font-bold">مطور BackEnd</p>
+            <div class="flex gap-4 mt-4 text-lg md:text-xl justify-center">
+                <a href="https://x.com/maroufroua" class="hover:text-sky-600"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/roua-hanane-marouf/" class="hover:text-sky-600"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class=" py-8">
+            <div class="language-switcher flex space-x-4 mt-4">
+                <a href="CV.html" class="hover:text-sky-600">FR</a>
+                <a href="CV-en.html" class="hover:text-sky-600">EN</a>
+                <a href="CV-ar.html" class="text-sky-600">AR</a>
+            </div>
+        </div>
+    </section>
+    <!-- Main Content -->
+    <div class="py-4 flex-1 text-gray-700">
+        <main class="p-6 overflow-y-auto h-full bg-stone-100 rounded-r-md">
+            <section id="about" class="content-section block">
+                <div>
+                    <h2 class="text-2xl md:text-4xl font-bold pb-4">
+                        <span class="text-sky-700">حول</span> نفسي
+                    </h2>
+                    <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-1/2">
+                            <p class="mt-2 md:mt-4">شغوفة بتطوير الويب، أسعى دائمًا لتعلم واستكشاف أحدث التقنيات لإنشاء حلول مبتكرة وعالية الأداء تلبي احتياجات العملاء.</p>
+                        </div>
+                        <div class="w-px h-36 bg-gradient-to-b from-gray-400 to-transparent"></div>
+                        <div class="w-1/2 flex flex-col  space-y-3 md:space-y-4 mt-2 md:mt-4">
+                            <div class="grid grid-cols-3">
+                                <div class="bg-sky-600 text-white rounded-md p-1">العنوان...</div>
+                                <div class="col-span-2 p-1 text-right">سيدي بلعباس، الجزائر</div>
+                            </div>
+                            <div class="grid grid-cols-3">
+                                <div class="bg-sky-600 text-white rounded-md p-1">البريد الإلكتروني...</div>
+                                <div class="col-span-2 p-1 text-right">marouf.r.h@gmail.com</div>
+                            </div>
+                            <div class="grid grid-cols-3">
+                                <div class="bg-sky-600 text-white rounded-md p-1">الهاتف...</div>
+                                <div class="col-span-2 p-1 text-right">05 40 57 43 51</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-8">
+                    <h2 class="text-2xl md:text-4xl font-bold pb-4">
+                        <span class="text-sky-700">خدماتي</span>
+                    </h2>
+                    <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
+                    <div class="flex items-start">
+                        <div class="flex flex-col">
+                            <div class="flex flex-col items-center text-center p-6">
+                                <div class="w-14 h-14 flex items-center justify-center bg-sky-600 rounded-full mb-4">
+                                    <i class="fas fa-palette text-white text-xl md:text-2xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold">تصميم</h3>
+                                <p class="text-gray-600">إنشاء قوالب ويب عصرية وأنيقة ومتجاوبة لتجربة مستخدم فريدة وسلسة وبديهية.</p>
+                            </div>
+                            <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
+                            <div class="flex flex-col items-center text-center p-6">
+                                <div class="w-14 h-14 flex items-center justify-center bg-sky-600 rounded-full mb-4">
+                                    <i class="fas fa-code text-white text-xl md:text-2xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold">تطوير الواجهة الخلفية</h3>
+                                <p class="text-gray-600">تصميم واجهة خلفية قوية باستخدام Django، آمنة ومُحسّنة وقابلة للتوسع لتطبيقات عالية الأداء وموثوقة في الإنتاج.</p>
+                            </div>
+                        </div>
+                        <div class="w-0.5 h-80 bg-gradient-to-b from-gray-400 to-transparent"></div>
+                        <div class="flex flex-col">
+                            <div class="flex flex-col items-center text-center p-6">
+                                <div class="w-14 h-14 flex items-center justify-center bg-sky-600 rounded-full mb-4">
+                                    <i class="fas fa-code text-white text-xl md:text-2xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold">تطوير الواجهة الأمامية</h3>
+                                <p class="text-gray-600">تصميم واجهات ديناميكية وأنيقة باستخدام Vue.js وReact Native، تجمع بين الأداء والسهولة والاستجابة.</p>
+                            </div>
+                            <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
+                            <div class="flex flex-col items-center text-center p-6">
+                                <div class="w-14 h-14 flex items-center justify-center bg-sky-600 rounded-full mb-4">
+                                    <i class="fas fa-server text-white text-xl md:text-2xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold">النشر</h3>
+                                <p class="text-gray-600">خدمة نشر آمنة ومُحسّنة تضمن الأداء والقابلية للتوسع والاستقرار لتطبيقات الويب والجوال.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-8">
+                    <h2 class="text-2xl md:text-4xl font-bold pb-4">
+                        <span class="text-sky-700">معلومات</span> عامة
+                    </h2>
+                    <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
+                    <div class="flex justify-center items-center px-12 pt-6">
+                        <div class="w-4/5 grid grid-cols-4 text-center">
+                            <div class="flex flex-col items-center">
+                                <i class="fas fa-window-restore text-sky-700 text-xl md:text-2xl"></i>
+                                <h2>+ 32</h2>
+                                <p>مشاريع.</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <i class="fas fa-user text-sky-700 text-xl md:text-2xl"></i>
+                                <h2>+ 24</h2>
+                                <p>عملاء.</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <i class="fas fa-calendar text-sky-700 text-xl md:text-2xl"></i>
+                                <h2>+ 6</h2>
+                                <p>سنوات الخبرة.</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <i class="fas fa-code text-sky-700 text-xl md:text-2xl"></i>
+                                <h2>+ 3</h2>
+                                <p>إطارات عمل متقنة.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-8">
+                    <h2 class="text-2xl md:text-4xl font-bold pb-4">
+                        <span class="text-sky-700">C</span>العملاء
+                    </h2>
+                    <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
+                    <div class="flex justify-center items-center space-x-8 py-8">
+                        <img src="Logo.svg" alt="Batimaps" class="w-24 h-24 opacity-50">
+                        <div class="w-0.5 h-32 bg-gradient-to-b from-gray-400 to-transparent"></div>
+                        <img src="gsh-removebg-preview.png" alt="GSH" class="w-24 h-24 opacity-50">
+                        <div class="w-0.5 h-32 bg-gradient-to-b from-transparent to-gray-400"></div>
+                        <img src="zaatcha%20(1).png" alt="Zaatcha" class="w-24 h-24 opacity-50">
+                        <div class="w-0.5 h-32 bg-gradient-to-b from-gray-400 to-transparent"></div>
+                        <img src="save.webp" alt="Savese" class="w-24 h-24 opacity-50">
+                    </div>
+                </div>
+            </section>
+            <section id="resume" class="content-section hidden">
+                <div>
+                    <h2 class="text-2xl md:text-4xl font-bold pb-4">
+                        <span class="text-sky-700">R</span>السيرة الذاتية
+                    </h2>
+                </div>
+                <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
+                <div class="py-8">
+                    <!-- Grid Container -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- EXPERIENCE SECTION -->
+                        <div>
+                            <h2 class="flex items-center text-xl font-bold text-gray-900 gap-2">
+                                <i class="fas fa-file text-xl md:text-2xl text-sky-700"></i> الخبرة
+                            </h2>
+                            <div class="h-px bg-gradient-to-r from-gray-400 to-transparent mx-auto mb-4"></div>
+                            <div class="mb-3">
+                                <span class="bg-sky-100 text-sky-600 px-3 py-1 text-xs rounded-md">2022 - الآن</span>
+                                <h3 class="font-bold mt-2">مطور Backend</h3>
+                                <p class="text-gray-500 text-sm">Egide Consulting.</p>
+                                <p class="text-gray-600 text-sm mt-2">
+                                    إنشاء وتحديث تطبيقات الويب، استكشاف حلول BI وتحليل احتياجات المستخدمين.
+                                </p>
+                            </div>
+                            <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto mb-3"></div>
+                            <div class="mb-3">
+                                <span class="bg-gray-200 text-gray-500 px-3 py-1 text-xs rounded-md">2022 - 2022</span>
+                                <h3 class="font-bold mt-2">مطور Fullstack</h3>
+                                <p class="text-gray-500 text-sm">Freelance.</p>
+                                <p class="text-gray-600 text-sm mt-2">
+                                    إنشاء تطبيقات الويب مع اختبار تقنيات جديدة ودراسة أدوات BI المختلفة.
+                                </p>
+                            </div>
+                            <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto mb-3"></div>
+                            <div class="">
+                                <span class="bg-gray-200 text-gray-500 px-3 py-1 text-xs rounded-md">2018 - 2022</span>
+                                <h3 class="font-bold mt-2">مهندس تطوير ويب</h3>
+                                <p class="text-gray-500 text-sm">مجموعة شركات الحسنوي</p>
+                                <p class="text-gray-600 text-sm mt-2">
+                                    تصميم وتحديث مواقع الويب والتطبيقات، إصلاح الأخطاء وإنشاء تقارير BI مع متابعة أحدث ممارسات التطوير.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- EDUCATION SECTION -->
+                        <div>
+                            <h2 class="flex items-center text-xl font-bold text-gray-900 gap-2">
+                                <i class="fa fa-university text-xl md:text-2xl text-sky-700"></i> التعليم
+                            </h2>
+                            <div class="h-px bg-gradient-to-r from-gray-400 to-transparent mx-auto mb-4"></div>
+                            <div class="mb-3">
+                                <span class="bg-gray-200 text-gray-500 px-3 py-1 text-xs rounded-md">2014 - 2019</span>
+                                <h3 class="font-bold mt-2">جامعة جيلالي ليابس</h3>
+                                <p class="text-gray-500 text-sm">SBA</p>
+                                <p class="text-gray-600 text-sm mt-2">
+                                    ماجستير في علوم الكمبيوتر: الويب وهندسة المعرفة
+                                </p>
+                            </div>
+                            <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto mb-3"></div>
+                            <div class="mb-3">
+                                <span class="bg-gray-200 text-gray-500 px-3 py-1 text-xs rounded-md">2021 - 2021</span>
+                                <h3 class="font-bold mt-2">Le phare</h3>
+                                <p class="text-gray-500 text-sm">SBA</p>
+                                <p class="text-gray-600 text-sm mt-2">
+                                    مقدمة إلى SSRS - مركز التدريب
+                                </p>
+                            </div>
+                            <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto mb-3"></div>
+                            <div>
+                                <span class="bg-gray-200 text-gray-500 px-3 py-1 text-xs rounded-md">2022 - 2022</span>
+                                <h3 class="font-bold mt-2">Le phare</h3>
+                                <p class="text-gray-500 text-sm">SBA</p>
+                                <p class="text-gray-600 text-sm mt-2">
+                                    مقدمة إلى Tableau Software - مركز التدريب
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-8 grid grid-cols-2 gap-6">
+                    <!-- Design Section -->
+                    <div class="pr-4">
+                        <h2 class="flex items-center text-xl font-bold text-gray-900 gap-2">
+                            <i class="fas fa-palette text-xl md:text-2xl text-sky-700"></i> التصميم
+                        </h2>
+                        <div class="h-px bg-gradient-to-r from-gray-400 to-transparent mx-auto mb-4"></div>
+                        <div>
+                            <p class="text-sm text-gray-600">تطوير الواجهة الأمامية</p>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                                <div class="bg-sky-500 h-2.5 rounded-full" style="width: 80%;"></div>
+                            </div>
+                            <p class="text-sm text-gray-600">التصميم</p>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                                <div class="bg-sky-500 h-2.5 rounded-full" style="width: 50%;"></div>
+                            </div>
+                            <p class="text-sm text-gray-600">النشر</p>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                                <div class="bg-sky-500 h-2.5 rounded-full" style="width: 70%;"></div>
+                            </div>
+                            <p class="text-sm text-gray-600">تطوير الواجهة الخلفية</p>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                                <div class="bg-sky-500 h-2.5 rounded-full" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Languages Section -->
+                    <div>
+                        <h2 class="flex items-center text-xl font-bold text-gray-900 gap-2">
+                            <i class="fas fa-flag text-xl md:text-2xl text-sky-700"></i> اللغات
+                        </h2>
+                        <div class="h-px bg-gradient-to-r from-gray-400 to-transparent mx-auto mb-4"></div>
+                        <p class="text-sm text-gray-600">العربية</p>
+                        <div class="flex space-x-1 mb-2">
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                        </div>
+                        <p class="text-sm text-gray-600">الفرنسية</p>
+                        <div class="flex space-x-1 mb-2">
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-gray-300 text-2xl">●</span>
+                        </div>
+                        <p class="text-sm text-gray-600">الإنجليزية</p>
+                        <div class="flex space-x-1 mb-2">
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-sky-500 text-2xl">●</span>
+                            <span class="text-gray-300 text-2xl">●</span>
+                        </div>
+                    </div>
+                    <!-- Coding Section -->
+                    <div>
+                        <h2 class="flex items-center text-xl font-bold text-gray-900 gap-2">
+                            <i class="fas fa-code text-xl md:text-2xl text-sky-700"></i> البرمجة
+                        </h2>
+                        <div class="h-px bg-gradient-to-r from-gray-400 to-transparent mx-auto mb-4"></div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center">
+                                <div class="relative w-16 h-16 mx-auto rounded-full flex items-center justify-center text-lg font-bold"
+                                     style="background: conic-gradient(#0ea5e9 90%, #e5e7eb 0);">
+                                    <div class="absolute w-14 h-14 bg-white rounded-full flex items-center justify-center">
+                                        90%
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-2">Postgresql</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="relative w-16 h-16 mx-auto rounded-full flex items-center justify-center text-lg font-bold"
+                                     style="background: conic-gradient(#0ea5e9 75%, #e5e7eb 0);">
+                                    <div class="absolute w-14 h-14 bg-white rounded-full flex items-center justify-center">
+                                        75%
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-2">Vue js</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="relative w-16 h-16 mx-auto rounded-full flex items-center justify-center text-lg font-bold"
+                                     style="background: conic-gradient(#0ea5e9 60%, #e5e7eb 0);">
+                                    <div class="absolute w-14 h-14 bg-white rounded-full flex items-center justify-center">
+                                        60%
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-2">React Native</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="relative w-16 h-16 mx-auto rounded-full flex items-center justify-center text-lg font-bold"
+                                     style="background: conic-gradient(#0ea5e9 95%, #e5e7eb 0);">
+                                    <div class="absolute w-14 h-14 bg-white rounded-full flex items-center justify-center">
+                                        95%
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-2">Django</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Knowledge Section -->
+                    <div>
+                        <h2 class="flex items-center text-xl font-bold text-gray-900 gap-2">
+                            <i class="fas fa-list-check text-xl md:text-2xl text-sky-700"></i> معرفة أخرى
+                        </h2>
+                        <div class="h-px bg-gradient-to-r from-gray-400 to-transparent mx-auto mb-4"></div>
+                        <ul class="text-sm text-gray-600 space-y-2">
+                            <li>- نشر حلول الويب.</li>
+                            <li>- تطبيقات Android وiOS.</li>
+                            <li>- تصميم الشعار.</li>
+                            <li>- تصميم لوحة القيادة.</li>
+                            <li>- اختبار وإصلاح الأخطاء.</li>
+                            <li>- منشئ مواقع الويب (WIX).</li>
+                            <li>- تصميم حلول الويب.</li>
+                            <li>- تصميم حلول الهاتف المحمول.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="portfolio" class="content-section hidden">
+                <div>
+                    <h2 class="text-2xl md:text-4xl font-bold pb-4">
+                        <span class="text-sky-700">P</span>المشاريع
+                    </h2>
+                </div>
+                <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
+                <div class="py-8 grid grid-cols-2 gap-6">
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="bati.png" alt="Image" class="rounded-md h-[122px]">
+                        <span class="inline-block mt-3 px-3 py-1 text-sm text-sky-700 border border-sky-500 rounded">2025</span>
+                        <h2 class="mt-2 text-lg font-bold">Batimaps</h2>
+                        <p class="text-gray-600 mt-2">حل SAAS لإدارة مشاريع البناء، التحكم في المستخدمين، دليل الشركات، والتواصل.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="zaat.png" alt="Image" class="rounded-md h-[122px]">
+                        <span class="inline-block mt-3 px-3 py-1 text-sm text-sky-700 border border-sky-500 rounded">قيد التنفيذ</span>
+                        <h2 class="mt-2 text-lg font-bold">Zaatcha</h2>
+                        <p class="text-gray-600 mt-2">إدارة حلول التذاكر والضيافة، إدارة المستخدمين، الوصول إلى المنصة، التقارير، المالية وإدارة العقود.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="Puma.png" alt="Image" class="rounded-md h-[122px]">
+                        <span class="inline-block mt-3 px-3 py-1 text-sm text-sky-700 border border-sky-500 rounded">2024</span>
+                        <h2 class="mt-2 text-lg font-bold">Pumal</h2>
+                        <p class="text-gray-600 mt-2">حل لتجميع طلبات الموزعين، إدارة الفواتير، عرض على الديون والدفعات مع لوحة تحكم. الحل متاح للمستخدمين GroupoPumal والموزعين.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <div class="flex justify-center">
+                            <img src="wajadli.png" alt="Image" class="rounded-md h-[122px]">
+                        </div>
+                        <span class="inline-block mt-3 px-3 py-1 text-sm text-sky-700 border border-sky-500 rounded">2023</span>
+                        <h2 class="mt-2 text-lg font-bold">Wajadli</h2>
+                        <p class="text-gray-600 mt-2">حل SAAS لإدارة الطلبات والتسليم، إدارة القائمة، إضافة القصص والترويج للمنتجات المنزلية.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <div class="flex justify-center">
+                            <img src="mdm.png" alt="Image" class="rounded-md h-[122px]">
+                        </div>
+                        <span class="inline-block mt-3 px-3 py-1 text-sm text-sky-700 border border-sky-500 rounded">2022</span>
+                        <h2 class="mt-2 text-lg font-bold">MDM mini ERP</h2>
+                        <p class="text-gray-600 mt-2">ERP صغير لإدارة الطلبات، المبيعات، المستخدمين، والتحكم في المخزون، المستودع وقاعة العرض. بالإضافة إلى عرض إحصائيات المنتجات الأكثر مبيعًا وغيرها من المقاييس (تطبيق لوحي).</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="cbi.png" alt="Image" class="rounded-md w-full">
+                        <span class="inline-block mt-3 px-3 py-1 text-sm text-sky-700 border border-sky-500 rounded">2019</span>
+                        <h2 class="mt-2 text-lg font-bold">CBI</h2>
+                        <p class="text-gray-600 mt-2">حل يجمع جميع لوائح المعلومات حسب الصلاحية، إدارة السجلات وإرسال لوائح معلومات أسبوعية عن استخدام واجهة المستخدم.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="hcomp.png" alt="Image" class="rounded-md w-full">
+                        <span class="inline-block mt-3 px-3 py-1 text-sm text-sky-700 border border-sky-500 rounded">2019</span>
+                        <h2 class="mt-2 text-lg font-bold">HCOMP</h2>
+                        <p class="text-gray-600 mt-2">نظام توصيات هجين كتطبيق ويب أيضًا يتيح التنبؤ بالاتجاهات لمنتج جديد ويسمح بمقارنة المنتجات من خلال تقييم خصائصها.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="content-section hidden">
+    <div>
+        <h2 class="text-2xl md:text-4xl font-bold pb-4">
+            <span class="text-sky-700">اتصل</span> بي
+        </h2>
+    </div>
+    <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
+    <div class="py-8">
+        <form id="contact-form">
+            <!-- Name -->
+            <div class="mb-4">
+                <label class="block text-gray-600 text-sm mb-2">الاسم</label>
+                <input type="text" name="name"
+                       class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
+                       placeholder="أدخل اسمك" required>
+            </div>
+            <!-- Email -->
+            <div class="mb-4">
+                <label class="block text-gray-600 text-sm mb-2">البريد الإلكتروني</label>
+                <input type="email" name="email"
+                       class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
+                       placeholder="أدخل بريدك الإلكتروني" required>
+            </div>
+            <!-- Message -->
+            <div class="mb-4">
+                <label class="block text-gray-600 text-sm mb-2">الرسالة</label>
+                <textarea name="message" rows="4"
+                          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
+                          placeholder="اكتب رسالتك" required></textarea>
+            </div>
+            <!-- Submit Button -->
+            <button type="submit"
+                    class="w-full bg-sky-500 text-white py-2 rounded-lg hover:bg-sky-600 transition">
+                إرسال الرسالة
+            </button>
+        </form>
+    </div>
+</section>
+
+        </main>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.menu-item').click(function () {
+            $('.menu-item').removeClass('text-sky-600');
+            $(this).addClass('text-sky-600');
+            let section = $(this).data('section');
+            $('.content-section').addClass('hidden');
+            $('#' + section).removeClass('hidden');
+        });
+    });
+
+    const canvas = document.getElementById('bg-animation');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const circles = [];
+
+    function isOverlapping(newCircle) {
+        return circles.some(existingCircle => {
+            let dx = newCircle.x - existingCircle.x;
+            let dy = newCircle.y - existingCircle.y;
+            let distance = Math.sqrt(dx * dx + dy * dy);
+            return distance < newCircle.radius + existingCircle.radius; // Check for overlap
+        });
+    }
+
+    for (let i = 0; i < 20; i++) {
+        let radius = Math.random() * 40 + 10;
+        let newCircle;
+        let attempts = 0;
+
+        do {
+            newCircle = {
+                x: Math.random() * (canvas.width - 2 * radius) + radius,
+                y: Math.random() * (canvas.height - 2 * radius) + radius,
+                radius: radius,
+                dx: (Math.random() - 0.5) * 4,
+                dy: (Math.random() - 0.5) * 4,
+            };
+            attempts++;
+        } while (isOverlapping(newCircle) && attempts < 50); // Try 50 times to avoid overlap
+
+        circles.push(newCircle);
+    }
+
+    function updateCircles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        circles.forEach((circle, i) => {
+            circle.x += circle.dx;
+            circle.y += circle.dy;
+
+            // Wall collision
+            if (circle.x - circle.radius < 0 || circle.x + circle.radius > canvas.width) circle.dx *= -1;
+            if (circle.y - circle.radius < 0 || circle.y + circle.radius > canvas.height) circle.dy *= -1;
+
+            // Collision with other circles
+            for (let j = i + 1; j < circles.length; j++) {
+                let other = circles[j];
+                let dx = other.x - circle.x;
+                let dy = other.y - circle.y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < circle.radius + other.radius) {
+                    // Swap velocities (basic elastic collision)
+                    [circle.dx, other.dx] = [other.dx, circle.dx];
+                    [circle.dy, other.dy] = [other.dy, circle.dy];
+                }
+            }
+
+            ctx.beginPath();
+            ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+            ctx.fill();
+            ctx.closePath();
+        });
+
+        requestAnimationFrame(updateCircles);
+    }
+
+    updateCircles();
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        let savedLang = localStorage.getItem("lang");
+        if (!savedLang) {
+            localStorage.setItem("lang", "fr"); // Default to French
+        } else {
+            if (savedLang === "en" && !window.location.href.includes("CV-en.html")) {
+                window.location.href = "CV-en.html";
+            } else if (savedLang === "ar" && !window.location.href.includes("CV-ar.html")) {
+                window.location.href = "CV-ar.html";
+            }
+        }
+
+        document.querySelectorAll(".language-switcher a").forEach(link => {
+            link.addEventListener("click", function (e) {
+                let lang = this.getAttribute("href").includes("en") ? "en" :
+                    this.getAttribute("href").includes("ar") ? "ar" : "fr";
+                localStorage.setItem("lang", lang);
+            });
+        });
+    });
+
+
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form from redirecting
+
+        let formData = new FormData(this); // Get form data
+
+        fetch("https://formspree.io/f/xjkyybak", {
+            method: "POST",
+            body: formData,
+            headers: {"Accept": "application/json"}
+        })
+            .then(response => {
+                if (response.ok) {
+                    alert("Thank you! Your message has been sent.");
+                    document.getElementById("contact-form").reset(); // Clear form
+                } else {
+                    alert("Oops! Something went wrong, please try again.");
+                }
+            })
+            .catch(error => alert("Error: " + error));
+    });
+
+</script>
+
+</body>
+</html>
