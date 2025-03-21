@@ -21,6 +21,21 @@
         left: 0;
         z-index: -1;
     }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        border-radius: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #e5e7eb; /* Tailwind's gray-200 */
+        border-radius: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #9ca3af; /* Tailwind's gray-400 */
+        border-radius: 8px;
+    }
 </style>
 
 <body class="bg-sky-700 text-white flex items-center justify-center min-h-screen font-poppins p-4 relative">
@@ -82,8 +97,8 @@
     </section>
 
     <!-- Main Content -->
-    <div class="py-4 flex-1 text-gray-700">
-        <main class="p-6 overflow-y-auto h-full bg-stone-100 rounded-r-md">
+    <div class="mb-16 py-4 flex-1 text-gray-700">
+        <main class="p-6 overflow-y-auto h-full bg-stone-100 rounded-l-md md:rounded-l-none rounded-r-md">
             <section id="about" class="content-section block">
                 <div>
                     <h2 class="text-2xl md:text-4xl font-bold pb-4">
@@ -91,18 +106,19 @@
                     </h2>
                     <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
 
-                    <div class="flex items-start gap-4">
-                        <div class="w-1/2">
+                    <div class="flex flex-col md:flex-row md:items-start gap-4">
+                        <!-- Left Section -->
+                        <div class="w-full md:w-1/2">
                             <p class="mt-2 md:mt-4">Passionnée par le développement web, je m'efforce d'apprendre
                                 continuellement et d'explorer les dernières technologies pour créer des solutions
                                 innovantes, performantes et adaptées aux besoins de mes clients.</p>
-                            </p>
                         </div>
 
-                        <!-- Vertical Fading Line -->
-                        <div class="w-px h-36 bg-gradient-to-b from-gray-400 to-transparent"></div>
+                        <!-- Vertical Divider (Hidden on Mobile) -->
+                        <div class="hidden md:block w-px h-36 bg-gradient-to-b from-gray-400 to-transparent"></div>
 
-                        <div class="w-1/2 flex flex-col  space-y-3 md:space-y-4 mt-2 md:mt-4">
+                        <!-- Right Section -->
+                        <div class="w-full md:w-1/2 flex flex-col space-y-3 md:space-y-4 mt-2 md:mt-4">
                             <div class="grid grid-cols-3">
                                 <div class="bg-sky-600 text-white rounded-md p-1">Adresse...</div>
                                 <div class="col-span-2 p-1 text-right">Sidi Bel Abbes, Algérie</div>
@@ -119,14 +135,13 @@
                     </div>
                 </div>
 
-
                 <div class="pt-8">
                     <h2 class="text-2xl md:text-4xl font-bold pb-4">
                         <span class="text-sky-700">Mes</span> services
                     </h2>
                     <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
 
-                    <div class="flex items-start">
+                    <div class="flex flex-col md:flex-row md:items-start">
                         <div class="flex flex-col">
                             <div class="flex flex-col items-center text-center p-6">
                                 <div class="w-14 h-14 flex items-center justify-center bg-sky-600 rounded-full mb-4">
@@ -147,7 +162,7 @@
                             </div>
 
                         </div>
-                        <div class="w-0.5 h-80 bg-gradient-to-b from-gray-400 to-transparent"></div>
+                        <div class="hidden md:block w-0.5 h-80 bg-gradient-to-b from-gray-400 to-transparent"></div>
 
                         <div class="flex flex-col">
                             <div class="flex flex-col items-center text-center p-6">
@@ -178,8 +193,8 @@
                     </h2>
                     <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
 
-                    <div class="flex justify-center items-center px-12 pt-6">
-                        <div class="w-4/5 grid grid-cols-4 text-center">
+                    <div class="flex justify-center items-center md:px-12 pt-6">
+                        <div class="md:w-4/5 grid grid-cols-4 text-center">
                             <div class="flex flex-col items-center">
                                 <i class="fas fa-window-restore text-sky-700 text-xl md:text-2xl"></i>
                                 <h2>+ 32</h2>
@@ -212,13 +227,13 @@
                     </h2>
                     <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
 
-                    <div class="flex justify-center items-center space-x-8 py-8">
+                    <div class="flex flex-col md:flex-row justify-center items-center md:space-x-8 gap-y-4 md:gap-y-0 py-8">
                         <img src="Logo.svg" alt="Batimaps" class="w-24 h-24 opacity-50">
-                        <div class="w-0.5 h-32 bg-gradient-to-b from-gray-400 to-transparent"></div>
+                        <div class="hidden md:block w-0.5 h-32 bg-gradient-to-b from-gray-400 to-transparent"></div>
                         <img src="gsh-removebg-preview.png" alt="GSH" class="w-24 h-24 opacity-50">
-                        <div class="w-0.5 h-32 bg-gradient-to-b from-transparent to-gray-400"></div>
+                        <div class="hidden md:block w-0.5 h-32 bg-gradient-to-b from-transparent to-gray-400"></div>
                         <img src="zaatcha%20(1).png" alt="Zaatcha" class="w-24 h-24 opacity-50">
-                        <div class="w-0.5 h-32 bg-gradient-to-b from-gray-400 to-transparent"></div>
+                        <div class="hidden md:block w-0.5 h-32 bg-gradient-to-b from-gray-400 to-transparent"></div>
                         <img src="save.webp" alt="Savese" class="w-24 h-24 opacity-50">
                     </div>
 
@@ -323,7 +338,7 @@
                     </div>
                 </div>
 
-                <div class="py-8 grid grid-cols-2 gap-6">
+                <div class="py-8 grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Design Section -->
                     <div class="pr-4">
 
@@ -485,27 +500,31 @@
                 </div>
                 <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
 
-                <div class="py-8 grid grid-cols-2 gap-6">
+                <div class="py-8 grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="bg-white p-4 rounded-lg shadow-lg">
                         <img src="bati.png" alt="Image" class="rounded-md h-[122px]">
                         <span class="inline-block mt-3 px-3 py-1 text-sm text-sky-700 border border-sky-500 rounded">2025</span>
                         <h2 class="mt-2 text-lg font-bold">Batimaps</h2>
-                        <p class="text-gray-600 mt-2">Solution SAAS pour la gestion de projets de construction, le contrôle utilisateur,
-                        un annuaire de société et les prospections.</p>
+                        <p class="text-gray-600 mt-2">Solution SAAS pour la gestion de projets de construction, le
+                            contrôle utilisateur,
+                            un annuaire de société et les prospections.</p>
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-lg">
                         <img src="zaat.png" alt="Image" class="rounded-md h-[122px]">
                         <span class="inline-block mt-3 px-3 py-1 text-sm text-sky-700 border border-sky-500 rounded">En cours</span>
                         <h2 class="mt-2 text-lg font-bold">Zaatcha</h2>
-                        <p class="text-gray-600 mt-2">Permet la gestion d'une solution de billetterie et d'hôtellerie, la gestion des utilisateurs, de
+                        <p class="text-gray-600 mt-2">Permet la gestion d'une solution de billetterie et d'hôtellerie,
+                            la gestion des utilisateurs, de
                             l'accès plateforme, le reporting, la finance et la gestion des contrats.</p>
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-lg">
                         <img src="Puma.png" alt="Image" class="rounded-md h-[122px]">
                         <span class="inline-block mt-3 px-3 py-1 text-sm text-sky-700 border border-sky-500 rounded">2024</span>
                         <h2 class="mt-2 text-lg font-bold">Pumal</h2>
-                        <p class="text-gray-600 mt-2">Une solution pour unifier les commandes distributeur, la gestion des BL, une vue sur les créances et
-                            paiements des distributeurs avec une dashboard. La solution est accessible aux utilisateurs de GroupoPumal ainsi que les distributeurs.</p>
+                        <p class="text-gray-600 mt-2">Une solution pour unifier les commandes distributeur, la gestion
+                            des BL, une vue sur les créances et
+                            paiements des distributeurs avec une dashboard. La solution est accessible aux utilisateurs
+                            de GroupoPumal ainsi que les distributeurs.</p>
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-lg">
                         <div class="flex justify-center">
@@ -513,7 +532,8 @@
                         </div>
                         <span class="inline-block mt-3 px-3 py-1 text-sm text-sky-700 border border-sky-500 rounded">2023</span>
                         <h2 class="mt-2 text-lg font-bold">Wajadli</h2>
-                        <p class="text-gray-600 mt-2">Solution SAAS pour la prise et gestion des commandes et la livraison, gestion du menu,
+                        <p class="text-gray-600 mt-2">Solution SAAS pour la prise et gestion des commandes et la
+                            livraison, gestion du menu,
                             ajout de story et faire de la Pub pour des pproduits fait maison.</p>
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-lg">
@@ -522,22 +542,27 @@
                         </div>
                         <span class="inline-block mt-3 px-3 py-1 text-sm text-sky-700 border border-sky-500 rounded">2022</span>
                         <h2 class="mt-2 text-lg font-bold">MDM mini ERP</h2>
-                        <p class="text-gray-600 mt-2">Un mini ERP pour la gestion des commandes, vente, utilisateurs et le contrôle du stock, dépôt et showroom.
-                            Ainsi qu'une vue sur les statistiques des produits les plus vendue et autres métriques (application tablette).</p>
+                        <p class="text-gray-600 mt-2">Un mini ERP pour la gestion des commandes, vente, utilisateurs et
+                            le contrôle du stock, dépôt et showroom.
+                            Ainsi qu'une vue sur les statistiques des produits les plus vendue et autres métriques
+                            (application tablette).</p>
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-lg">
                         <img src="cbi.png" alt="Image" class="rounded-md w-full">
                         <span class="inline-block mt-3 px-3 py-1 text-sm text-sky-700 border border-sky-500 rounded">2019</span>
                         <h2 class="mt-2 text-lg font-bold">CBI</h2>
-                        <p class="text-gray-600 mt-2">Une solution qui regroupe tous les tableaux de bord par autorisation, la gestion d'historique et
+                        <p class="text-gray-600 mt-2">Une solution qui regroupe tous les tableaux de bord par
+                            autorisation, la gestion d'historique et
                             l'envoie de dashbord Hebdomadaire de l'accès utilisateur sur l'interface.</p>
                     </div>
                     <div class="bg-white p-4 rounded-lg shadow-lg">
                         <img src="hcomp.png" alt="Image" class="rounded-md w-full">
                         <span class="inline-block mt-3 px-3 py-1 text-sm text-sky-700 border border-sky-500 rounded">2019</span>
                         <h2 class="mt-2 text-lg font-bold">HCOMP</h2>
-                        <p class="text-gray-600 mt-2">Système de recommandation hybride sous forme d'application web qui permet aussi la prédiction
-                            des tendances d'un nouveau produit, permet aussi de comparer les produits en notant leurs caractéristiques.</p>
+                        <p class="text-gray-600 mt-2">Système de recommandation hybride sous forme d'application web qui
+                            permet aussi la prédiction
+                            des tendances d'un nouveau produit, permet aussi de comparer les produits en notant leurs
+                            caractéristiques.</p>
                     </div>
                 </div>
 

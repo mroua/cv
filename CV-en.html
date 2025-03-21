@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryan VCard Clone</title>
+    <title>Marouf Roua resume</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -19,6 +19,21 @@
         top: 0;
         left: 0;
         z-index: -1;
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        border-radius: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #e5e7eb; /* Tailwind's gray-200 */
+        border-radius: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #9ca3af; /* Tailwind's gray-400 */
+        border-radius: 8px;
     }
 </style>
 
@@ -77,19 +92,19 @@
     </section>
     <!-- Main Content -->
     <div class="py-4 flex-1 text-gray-700">
-        <main class="p-6 overflow-y-auto h-full bg-stone-100 rounded-r-md">
+        <main class="p-6 overflow-y-auto h-full bg-stone-100 rounded-l-md md:rounded-l-none rounded-r-md">
             <section id="about" class="content-section block">
                 <div>
                     <h2 class="text-2xl md:text-4xl font-bold pb-4">
                         <span class="text-sky-700">About</span> me
                     </h2>
                     <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
-                    <div class="flex items-start gap-4">
-                        <div class="w-1/2">
+                    <div class="flex flex-col md:flex-row md:items-start gap-4">
+                        <div class="w-full md:w-1/2">
                             <p class="mt-2 md:mt-4">Passionate about web development, I strive to continuously learn and explore the latest technologies to create innovative, high-performance, and tailored solutions for my clients.</p>
                         </div>
-                        <div class="w-px h-36 bg-gradient-to-b from-gray-400 to-transparent"></div>
-                        <div class="w-1/2 flex flex-col  space-y-3 md:space-y-4 mt-2 md:mt-4">
+                        <div class="hidden md:block w-px h-36 bg-gradient-to-b from-gray-400 to-transparent"></div>
+                        <div class="w-full md:w-1/2 flex flex-col  space-y-3 md:space-y-4 mt-2 md:mt-4">
                             <div class="grid grid-cols-3">
                                 <div class="bg-sky-600 text-white rounded-md p-1">Address...</div>
                                 <div class="col-span-2 p-1 text-right">Sidi Bel Abbes, Algeria</div>
@@ -105,12 +120,13 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="pt-8">
                     <h2 class="text-2xl md:text-4xl font-bold pb-4">
                         <span class="text-sky-700">My</span> services
                     </h2>
                     <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
-                    <div class="flex items-start">
+                    <div class="flex flex-col md:flex-row md:items-start">
                         <div class="flex flex-col">
                             <div class="flex flex-col items-center text-center p-6">
                                 <div class="w-14 h-14 flex items-center justify-center bg-sky-600 rounded-full mb-4">
@@ -128,7 +144,7 @@
                                 <p class="text-gray-600">Design of robust backends with Django, secure, optimized, and scalable for high-performance and reliable applications in production.</p>
                             </div>
                         </div>
-                        <div class="w-0.5 h-80 bg-gradient-to-b from-gray-400 to-transparent"></div>
+                        <div class="hidden md:block w-0.5 h-80 bg-gradient-to-b from-gray-400 to-transparent"></div>
                         <div class="flex flex-col">
                             <div class="flex flex-col items-center text-center p-6">
                                 <div class="w-14 h-14 flex items-center justify-center bg-sky-600 rounded-full mb-4">
@@ -148,13 +164,14 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="py-8">
                     <h2 class="text-2xl md:text-4xl font-bold pb-4">
                         <span class="text-sky-700">General</span> information
                     </h2>
                     <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
-                    <div class="flex justify-center items-center px-12 pt-6">
-                        <div class="w-4/5 grid grid-cols-4 text-center">
+                    <div class="flex justify-center items-center md:px-12 pt-6">
+                        <div class="md:w-4/5 grid grid-cols-4 text-center">
                             <div class="flex flex-col items-center">
                                 <i class="fas fa-window-restore text-sky-700 text-xl md:text-2xl"></i>
                                 <h2>+ 32</h2>
@@ -178,22 +195,24 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="py-8">
                     <h2 class="text-2xl md:text-4xl font-bold pb-4">
                         <span class="text-sky-700">C</span>lients
                     </h2>
                     <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
-                    <div class="flex justify-center items-center space-x-8 py-8">
+                    <div class="flex flex-col md:flex-row justify-center items-center md:space-x-8 gap-y-4 md:gap-y-0 py-8">
                         <img src="Logo.svg" alt="Batimaps" class="w-24 h-24 opacity-50">
-                        <div class="w-0.5 h-32 bg-gradient-to-b from-gray-400 to-transparent"></div>
+                        <div class="hidden md:block w-0.5 h-32 bg-gradient-to-b from-gray-400 to-transparent"></div>
                         <img src="gsh-removebg-preview.png" alt="GSH" class="w-24 h-24 opacity-50">
-                        <div class="w-0.5 h-32 bg-gradient-to-b from-transparent to-gray-400"></div>
+                        <div class="hidden md:block w-0.5 h-32 bg-gradient-to-b from-transparent to-gray-400"></div>
                         <img src="zaatcha%20(1).png" alt="Zaatcha" class="w-24 h-24 opacity-50">
-                        <div class="w-0.5 h-32 bg-gradient-to-b from-gray-400 to-transparent"></div>
+                        <div class="hidden md:block w-0.5 h-32 bg-gradient-to-b from-gray-400 to-transparent"></div>
                         <img src="save.webp" alt="Savese" class="w-24 h-24 opacity-50">
                     </div>
                 </div>
             </section>
+
             <section id="resume" class="content-section hidden">
                 <div>
                     <h2 class="text-2xl md:text-4xl font-bold pb-4">
@@ -201,6 +220,7 @@
                     </h2>
                 </div>
                 <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
+
                 <div class="py-8">
                     <!-- Grid Container -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -237,6 +257,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <!-- EDUCATION SECTION -->
                         <div>
                             <h2 class="flex items-center text-xl font-bold text-gray-900 gap-2">
@@ -272,7 +293,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="py-8 grid grid-cols-2 gap-6">
+
+                <div class="py-8 grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Design Section -->
                     <div class="pr-4">
                         <h2 class="flex items-center text-xl font-bold text-gray-900 gap-2">
@@ -408,6 +430,7 @@
                     </div>
                 </div>
             </section>
+
             <section id="portfolio" class="content-section hidden">
                 <div>
                     <h2 class="text-2xl md:text-4xl font-bold pb-4">
@@ -415,7 +438,7 @@
                     </h2>
                 </div>
                 <div class="w-3/4 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto"></div>
-                <div class="py-8 grid grid-cols-2 gap-6">
+                <div class="py-8 grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="bg-white p-4 rounded-lg shadow-lg">
                         <img src="bati.png" alt="Image" class="rounded-md h-[122px]">
                         <span class="inline-block mt-3 px-3 py-1 text-sm text-sky-700 border border-sky-500 rounded">2025</span>
@@ -464,6 +487,7 @@
                     </div>
                 </div>
             </section>
+
             <section id="contact" class="content-section hidden">
                 <div>
                     <h2 class="text-2xl md:text-4xl font-bold pb-4">
